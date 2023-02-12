@@ -1,0 +1,3 @@
+disburse_merchants:
+   cron: "1 0 * * 0"
+   class: "DisburseMerchantsWorker"
