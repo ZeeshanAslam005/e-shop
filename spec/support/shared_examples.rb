@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# shared example for email formatting test suites
 
 RSpec.shared_examples 'email format' do
   it 'is valid with good format' do

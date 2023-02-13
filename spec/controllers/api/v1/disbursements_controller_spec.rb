@@ -4,11 +4,11 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::DisbursementsController, type: :controller do
   describe 'GET #index' do
-    subject { get :index, params: }
+    subject { get :index, params: params}
 
     let(:disbursement) { create(:disbursement) }
 
-    before do
+    before do #create disbursemnt foir each it block and call subject
       disbursement
       subject
     end

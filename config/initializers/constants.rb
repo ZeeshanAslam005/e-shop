@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# constatnt file useful when smae values where used multiple places or string or in case of prices
 
 FIRST_LIMIT = 50
 SECOND_LIMIT = 300

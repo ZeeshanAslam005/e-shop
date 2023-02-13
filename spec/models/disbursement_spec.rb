@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Disbursement, type: :model do
-  context '.for_merchant' do
+  context '.for_merchant' do #handling class level sceope
     let(:disbursement) { create(:disbursement) }
 
     context '.When disbursed order is in given dates' do
@@ -19,7 +19,7 @@ RSpec.describe Disbursement, type: :model do
       }
     end
 
-    context '.When disbursed order is not in given dates' do
+    context '.When disbursed order is not in given dates' do #handling class level sceope
       let!(:order) { create(:order, completed_at: nil) }
 
       it {
@@ -33,7 +33,7 @@ RSpec.describe Disbursement, type: :model do
     end
   end
 
-  context '.When orders are completed' do
+  context '.When orders are completed' do #handling class level sceope
     let!(:order) { create(:order) }
 
     it 'should disbursed order' do
@@ -41,7 +41,7 @@ RSpec.describe Disbursement, type: :model do
     end
   end
 
-  context '.When orders are in incomplete' do
+  context '.When orders are in incomplete' do #handling class level sceope
     let(:order) { create(:order, completed_at: nil) }
 
     it 'should not disbursed order' do

@@ -39,7 +39,7 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
-  config.include FactoryBot::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods #load factories
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
@@ -65,7 +65,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-Shoulda::Matchers.configure do |config|
+Shoulda::Matchers.configure do |config| #shoulda matchers provide the should helper
   config.integrate do |with|
     with.test_framework :rspec
     with.library :rails

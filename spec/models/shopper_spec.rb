@@ -10,7 +10,7 @@ RSpec.describe Shopper, type: :model do
   describe 'validations' do
     subject { create(:shopper) }
 
-    include_examples 'email format'
+    include_examples 'email format' #email formatting test suites using shared examples
 
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:name) }

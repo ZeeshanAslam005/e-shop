@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+#factory for disbursement
 
 FactoryBot.define do
   factory :disbursement do

@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+#factory for order
 
 FactoryBot.define do
   factory :order do

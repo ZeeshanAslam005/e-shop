@@ -49,18 +49,18 @@ gem 'bootsnap', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem 'rubocop'
-gem 'rubocop-rspec'
-gem 'sidekiq', '~>6.0.0'
-gem 'sidekiq-cron'
+gem 'rubocop' #rubop for ensuring best-practices
+gem 'rubocop-rspec' #rubop for ensuring best-practices on rspec
+gem 'sidekiq', '~>6.0.0' #for backgroun job
+gem 'sidekiq-cron' #for backgroudn cron job
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'byebug'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'rspec-rails'
+  gem 'factory_bot_rails' #creaet data through factories
+  gem 'faker' #faker to populate db with fake data
+  gem 'rspec-rails' #add rspec
 end
 
 group :development do
@@ -78,6 +78,6 @@ group :test do
   gem 'capybara'
   gem 'rspec-sidekiq'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'shoulda-matchers', '~> 4.0' #it provide should matcher(write less code)
   gem 'webdrivers'
 end

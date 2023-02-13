@@ -10,7 +10,7 @@ RSpec.describe Merchant, type: :model do
   describe 'validations' do
     subject { create(:merchant) }
 
-    include_examples 'email format'
+    include_examples 'email format' #email formatting test suites using shared examples
 
     it { should validate_presence_of(:cif) }
     it { should validate_presence_of(:email) }

@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# Test suite for DisburseMerchant backgound job that calculate disbursed orders
 
 require 'rails_helper'
 RSpec.describe DisburseMerchantsWorker, type: :worker do

@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+# load merchnats, shoppers, and orders respectively
 merchants = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'merchants.json'), symbolize_names: true))
 Merchant.create!(merchants['RECORDS'])
 
@@ -9,4 +8,4 @@ Shopper.create!(shoppers['RECORDS'])
 orders = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'orders.json'), symbolize_names: true))
 Order.create!(orders['RECORDS'])
 
-Disbursement.disburse!
+Disbursement.disburse! #disburse completed orders

@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+##factory for merchant
 
 FactoryBot.define do
   factory :merchant do
