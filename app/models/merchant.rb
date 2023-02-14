@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Merchant < ApplicationRecord
-  EMAIL_REGEX = /.+@.+\..+/
+  EMAIL_REGEX = /.+@.+\..+/ #check valididty of email
   has_many :orders, dependent: :destroy
 
   validates :cif, presence: true
